@@ -1,0 +1,83 @@
+@use "sass:color";
+
+// Color palette
+$c-white: #ffffff;
+$c-black: #000000;
+$c-chalk: #f4f4f4;
+$c-charcoal: #292929;
+$c-wetAsphalt: #282d33;
+$c-sky: #1187f5;
+$c-sky: #0079eb;
+$c-grass: #0dce57;
+$c-sea: #00b1b9;
+$c-grass: #14b451;
+$c-candy: #c300ff;
+$c-lightRed: #e94545;
+$c-blood: #da2828;
+$c-wetBlood: #a93d3f;
+$c-wheatYellow: #fc9803;
+
+// Global
+$primaryColor: $c-sky;
+$secondaryColor: $c-sea;
+$primaryColorDark: color.mix($c-sky, $c-wetAsphalt, 80%);
+$secondaryColorDark: color.adjust($c-grass, $lightness: -10%);
+$errorColor: $c-lightRed;
+$errorColorDark: $c-wetBlood;
+$separationColor: color.adjust($c-chalk, $lightness: -10%);
+$separationColorDark: color.adjust($c-wetAsphalt, $lightness: 15%);
+
+// Layouts
+$bodyBackgroundColor: $c-chalk;
+$bodyBackgroundColorDark: color.adjust($c-wetAsphalt, $lightness: -2%);
+$wrapperWidth: 1280px;
+$wrapperSidePaddings: 32px;
+$wrapperSidePaddingsMobile: 10px;
+$sectionBorderRadius: 8px;
+$sectionBackgroundColorDark: color.adjust($bodyBackgroundColorDark, $lightness: 3%);
+$sectionBackgroundColor: color.mix($primaryColor, $c-white, 0%);
+
+// Small layouts
+
+$boxBackgroundColor: color.mix($primaryColor, $c-white, 0%);
+$boxBackgroundColorDark: color.adjust($bodyBackgroundColorDark, $lightness: 3%);
+
+// Text
+$defaultFontColor: $c-charcoal;
+$defaultFontColorDark: rgba($c-white, 0.8);
+$errorFontColor: $c-lightRed;
+$errorFontColorDark: $c-lightRed;
+
+// Input
+$inputBackgroundColor: #ffffff;
+$inputBackgroundColorHover: color.adjust($c-white, $lightness: -5%);
+$inputBackgroundColorDark: color.adjust($c-wetAsphalt, $lightness: -6%);
+$inputBackgroundColorDarkHover: color.adjust($c-wetAsphalt, $lightness: -3%);
+$inputBorderRadius: 4px;
+$inputBorderColor: #00000030;
+$inputBorderColorHover: #00000045;
+$inputBorderColorDark: #ffffff20;
+$inputBorderColorDarkHover: #ffffff35;
+
+// Table
+$tableBorderRadius: 8px;
+$tableHeadColor: $c-white;
+$tableHeadBackgroundColor: $secondaryColor;
+$tableHeadEvenBackgroundColor: $c-white;
+$tableBodyBackgroundColor: color.mix($primaryColor, $c-white, 0%);
+$tableBodyEvenBackgroundColor: color.adjust($c-white, $lightness: -3%);
+$tableHeadColorDark: $c-white;
+$tableHeadBackgroundColorDark: $secondaryColorDark;
+$tableHeadEvenBackgroundColorDark: color.adjust($bodyBackgroundColorDark, $lightness: 5%);
+$tableBodyBackgroundColorDark: color.adjust($bodyBackgroundColorDark, $lightness: 3%);
+$tableBodyEvenBackgroundColorDark: color.adjust($bodyBackgroundColorDark, $lightness: 6%);
+
+:root {
+	--primary-color: #{$primaryColor};
+	--separation-color: #{$separationColor};
+
+	&[data-theme='dark'] {
+		--primary-color: #{$primaryColorDark};
+		--separation-color: #{$separationColorDark};
+	}
+}

@@ -1,0 +1,63 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+:root {
+	--default-font-size: 12px;
+	--default-font-color: #{$defaultFontColor};
+	--error-font-color: #{$errorFontColor};
+	
+	&[data-theme='dark'] {
+		--default-font-color: #{$defaultFontColorDark};
+		--error-font-color: #{$errorFontColorDark};
+	}
+
+	@include after-mobile {
+		--default-font-size: 14px;
+	}
+
+	&{
+		font-size: var(--default-font-size);
+	}
+}
+
+* {
+	color: var(--default-font-color);
+	font-family: 'Roboto';
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 300;
+
+	@include mobile {
+		font-size: 20px;
+	}
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.bold {
+	font-weight: 400;
+}
+
+p {
+	text-align: justify;
+}
+
+.link {
+	cursor: pointer;
+	opacity: .6;
+	transition: all .2s ease;
+
+	&:hover {
+		opacity: 1;
+	}
+}
