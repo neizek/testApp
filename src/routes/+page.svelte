@@ -6,11 +6,7 @@
 	import Button from "../ui/Button.svelte";
 	import Section from "../ui/Section.svelte";
 
-    let writtenCode = `
-		function solve(a) {
-			return a > 10;
-		}
-	`;
+    let writtenCode = '';
 
 	const avaliableLanguages = [
 		{
@@ -109,10 +105,10 @@
 		{#if result.status === 'success'}
 			{result.output ?? 'Ваш код ничего не вернул'}
 		{:else}
-			<span class="error">Ошибка: {result.output}</span>
+			<span>Ошибка: {result.output}</span>
 		{/if}
 	{:else}
-		<p>Запустите код, чтобы здесь отобразился результат</p>
+		<span>Запустите код, чтобы здесь отобразился результат</span>
 	{/if}
 </Section>
 

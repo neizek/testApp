@@ -1,38 +1,22 @@
-# sv
+# Тестовое приложение
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Описание
 
-## Creating a project
+Тестовое задание для трудоустройства на позицию Frontend Developer. [Описание задания](https://boom-coriander-bf4.notion.site/Junior-Frontend-Developer-15a3d0b96cee800e9047ff6e58ae408b).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Запуск проекта
 
-```bash
-# create a new project in the current directory
-npx sv create
+Чтобы запустить проект локально:
+1. Скопировать репозиторий и запустить терминал,
+2. npm install,
+3. npm run dev.
 
-# create a new project in my-app
-npx sv create my-app
-```
+Приложение запустится на http://localhost:5200
 
-## Developing
+## Функциональность, комментарии и расширения
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Никаких ограничений в рамках приложения нету.
 
-```bash
-npm run dev
+Приложение написано на SvelteKit фреймворке с использованием TypeScript. При желании, по принципу, можно быстро переписать на VueJS (компановка фреймворков очень похожа).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Модульная система позволяет расширять приложение в любом необходимом направлении. UI компоненты сделаны так, чтобы их можно было использовать везде. Тоже самое касается структуры SCSS, достаточно использовать необходимые классы, чтобы поддерживать единый дизайн и структуру приложения. Приложение запускается как SSR, но в последствии происходит гидрация, и работает оно как CSR (без потери SEO оптимизации). Добавив манифест и serviceworker, можно сделать приложение устанавливаемым.
