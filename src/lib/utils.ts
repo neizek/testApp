@@ -1,3 +1,5 @@
+import { browser } from "$app/environment";
+
 /** Dispatch event on click outside of node */
 export function clickOutside(node: Node) {
 	const handleClick = (event: MouseEvent) => {
@@ -20,3 +22,11 @@ export function clickOutside(node: Node) {
 		}
 	};
 }
+
+export const isMobileScreen = (() => {
+	if (browser) {
+		return (window.innerWidth < 768)
+	}
+
+	return false;
+})();

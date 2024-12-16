@@ -69,7 +69,7 @@
 	}
 </script>
 <Section title="Задание">
-	<p>Создайте функцию "solve", которая принимает один параметр в виде числа и возвращает boolean true если число больше 10.</p>
+	<p>Напишите код, который выведет текст 'Hello, world'.</p>
 </Section>
 <Section title="Рабочее пространство">
 	<div class="vertical-flex space">
@@ -90,7 +90,7 @@
 		<CodeMirror
 			styles={{
 				'&': {
-					height: '50rem'
+					height: '20rem'
 				},
 				'.cm-scroller': {
 					overflow: 'inherit'
@@ -109,7 +109,7 @@
 		{#if result.status === 'success'}
 			{result.output ?? 'Ваш код ничего не вернул'}
 		{:else}
-			Ошибка: {result.output}
+			<span class="error">Ошибка: {result.output}</span>
 		{/if}
 	{:else}
 		<p>Запустите код, чтобы здесь отобразился результат</p>

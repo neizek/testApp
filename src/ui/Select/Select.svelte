@@ -3,11 +3,11 @@
 	// import { clickOutside } from '@utils/components/clickOutside';
 	// import { isMobile } from '@utils/device';
 	import { createEventDispatcher } from 'svelte';
-	// import BottomBox from '../BottomBox/BottomBox.svelte';
+	import BottomBox from '../BottomBox/BottomBox.svelte';
 	import ItemsList from './ItemsList.svelte';
 	import type { SelectItem } from './types';
     import { compareObjects } from '$lib/objects';
-    import { clickOutside } from '$lib/utils';
+    import { clickOutside, isMobileScreen } from '$lib/utils';
 
 	function getSelectedLabel(
 		selectedValue: any,
@@ -196,13 +196,13 @@
 		{/if}
 	</label>
 	{#if open}
-		<!-- {#if isMobile}
+		{#if isMobileScreen}
 			<BottomBox bind:isOpened={open}>
 				<ItemsList shownItems="{shownItems}" onSelect="{onSelect}" />
 			</BottomBox>
-		{:else} -->
+		{:else}
 			<ItemsList shownItems="{shownItems}" onSelect={onSelect} />
-		<!-- {/if} -->
+		{/if}
 	{/if}
 </div>
 

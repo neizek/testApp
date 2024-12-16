@@ -1,9 +1,10 @@
-<footer>
-	<span>Тестовое задание {new Date().getFullYear()}</span>
-</footer>
+<header>
+	<h1>Тестовое задание</h1>
+</header>
 
 <style lang="scss">
-	footer {
+	header {
+		background-color: var(--box-background-color);
 		height: 40px;
 		display: flex;
 		width: 100%;

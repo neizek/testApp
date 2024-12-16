@@ -1,14 +1,8 @@
-// @forward './abstract/mixins';
-// @forward './abstract/variables';
-@use './abstract/mixins' as *;
-@use './abstract/variables' as *;
-
 @forward './global/fonts';
 @forward './global/placeholder';
 @forward './global/predefined';
 @forward './global/layouts';
 @forward './global/text';
-// @forward './global/table';
 @forward './global/input';
 @forward './global/icons';
 @forward './global/effects';

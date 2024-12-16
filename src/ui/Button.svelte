@@ -33,9 +33,9 @@
 	@use '../styles/abstract/mixins' as *;
 	
 	button {
-		@include mobile {
-			width: 100%;
-		}
+		// @include mobile {
+		// 	width: 100%;
+		// }
 		
 		// &:disabled {
 		// 	span,
